@@ -1,0 +1,92 @@
+body {
+  background-color: #111;
+  color: #eee;
+}
+
+h1 {
+  font-family: "Epilogue", sans-serif;
+}
+
+h2 {
+  font-family: "Manrope", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.formulario .titulo {
+  margin: 2.5vmin;
+}
+
+.form-controle {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-controle input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+label {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.2rem;
+}
+
+button {
+  border: none;
+  color: #eee;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.25rem;
+  background-color: rgb(60, 0, 100);
+  height: 50px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: rgb(33, 0, 54);
+}
+
+input:focus {
+  outline: none;
+}
+
+input {
+  color: #eee;
+  caret-color: #eee;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.15rem;
+}
+
+.login-error {
+  font-size: 1.1rem;
+  color: red;
+  animation: blink 2s ease-in-out infinite;
+  font-family: "Manrope", sans-serif;
+}
+
+@keyframes blink {
+  0% {
+    color: rgb(128, 0, 0);
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: rgb(128, 0, 0);
+  }
+}
+
+/*# sourceMappingURL=FormLogin.css.map */
