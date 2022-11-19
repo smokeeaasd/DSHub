@@ -7,7 +7,7 @@
 	<title>Login</title>
 	<?php include_once VIEWS . "../includes/css_config.php"; ?>
 
-	<link href="./../../../View/css/FormLogin.css" rel="stylesheet">
+	<link href="./../../../View/css/FormRegister.css" rel="stylesheet">
 </head>
 
 <body>
@@ -15,13 +15,18 @@
 
 		<div class="formulario">
 			<div class="titulo">
-				<h2>Entrar</h2>
+				<h2>Registrar</h2>
 			</div>
 
-			<form action="/login/auth" method="POST" class="form-controle p-3 w-100">
+			<form action="/register/create" method="POST" class="form-controle p-3 w-100">
 
 				<label>Email</label>
 				<input name="email" autocomplete="none" />
+
+				<br />
+				
+				<label>Usuário</label>
+				<input name="usuario" autocomplete="none" />
 
 				<br />
 
@@ -32,16 +37,10 @@
 
 				<button>Entrar</button>
 
-				<br />
-				
-				<div style="flex-direction: row;">
-					<input name="lembrar" type="checkbox" />
-					<label>Lembrar sessão</label>
-				</div>
 			</form>
 
-			<?php if (isset($_GET["erro"])) : ?>
-				<p class="login-error">Usuário ou senha incorretos</p>
+			<?php if (isset($_GET["existentemail"])): ?>
+				<p class="login-error">Email já existente</p>
 			<?php endif; ?>
 
 		</div>

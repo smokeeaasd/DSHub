@@ -2,23 +2,15 @@
 
 namespace App\Controller;
 
-use App\Model\HomeModel;
-
 class HomeController extends Controller
 {
 	public static function index()
 	{
-		if (!(isset($_SESSION["usuario_logado"])))
-		{
-			header("Location: /");
-		}
+		if (isset($_SESSION["usuario_logado"]) || !isset($_POST["lembrar"]))
+			parent::render('\\Home\\Home');
 		else
-		{
-			$model = new HomeModel();
-
-			$model->getAllRows();
-			
-			parent::render("\\Home\\Home", $model);
-		}
+			header("Location: /login");
 	}
 }
+
+?>
