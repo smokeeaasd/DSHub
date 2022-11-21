@@ -36,8 +36,8 @@ switch ($url) {
 		ResetPasswordController::index();
 	break;
 	
-	case '/reset':
-		ResetPasswordController::index();
+	case '/reset/save':
+		ResetPasswordController::save();
 	break;
 
 	case '/home':

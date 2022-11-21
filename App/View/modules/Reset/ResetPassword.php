@@ -15,7 +15,7 @@
 
 		<div class="formulario">
 			<div class="titulo">
-				<h2>Registrar</h2>
+				<h2>Redefinir Senha</h2>
 			</div>
 
 			<form action="/reset/save" method="POST" class="form-controle p-3 w-100">
@@ -35,7 +35,7 @@
 			</form>
 
 			<?php if (isset($_GET["erro"])): ?>
-				<p class="login-error">Não foi possível alterar a sua senha, verifique suas credenciais.</p>
+				<p class="login-error">Email não cadastrado</p>
 			<?php endif; ?>
 
 		</div>

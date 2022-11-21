@@ -11,7 +11,7 @@ class ResetPasswordController extends Controller
 		parent::render('\\Reset\\ResetPassword');
 	}
 
-	public static function register()
+	public static function save()
 	{
 		$model = new ResetPasswordModel();
 
