@@ -2,7 +2,7 @@
 
 namespace App\DAO;
 
-class RegisterDAO extends DAO
+class ResetPasswordDAO extends DAO
 {
 
 	public function __construct()
@@ -20,18 +20,17 @@ class RegisterDAO extends DAO
 
 		$stmt->execute();
 
-		return $stmt->fetchObject("App\\Model\\RegisterModel");
+		return $stmt->fetchObject("App\\Model\\ResetPasswordModel");
 	}
 
-	public function insert($email, $username, $password)
+	public function update($email, $password)
 	{
-		$sql = "INSERT INTO Usuarios(email, usuario, senha) VALUES(?, ?, sha1(?))";
+		$sql = "UPDATE Usuarios SET senha = SHA1(?) WHERE email = ?";
 
 		$stmt = $this->conexao->prepare($sql);
 
-		$stmt->bindValue(1, $email);
-		$stmt->bindValue(2, $username);
-		$stmt->bindValue(3, $password);
+		$stmt->bindValue(1, $password);
+		$stmt->bindValue(2, $email);
 
 		$stmt->execute();
 	}

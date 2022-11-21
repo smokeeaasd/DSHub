@@ -22,7 +22,7 @@ class LoginController extends Controller
 
 		if ($usuario_logado !== null)
 		{
-			if ($_POST["lembrar"])
+			if (isset($_POST["lembrar"]))
 				$_SESSION['usuario_logado'] = $usuario_logado;
 
 			header("Location: /home");
