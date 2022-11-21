@@ -3,6 +3,7 @@
 use App\Controller\HomeController;
 use App\Controller\LoginController;
 use App\Controller\RegisterController;
+use App\Controller\ResetPasswordController;
 
 $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
@@ -29,6 +30,14 @@ switch ($url) {
 
 	case '/register/create':
 		RegisterController::register();
+	break;
+
+	case '/reset':
+		ResetPasswordController::index();
+	break;
+	
+	case '/reset':
+		ResetPasswordController::index();
 	break;
 
 	case '/home':

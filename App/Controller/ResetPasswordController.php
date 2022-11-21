@@ -4,11 +4,11 @@ namespace App\Controller;
 
 use App\Model\ResetPasswordModel;
 
-class RegisterController extends Controller
+class ResetPasswordController extends Controller
 {
 	public static function index()
 	{
-		parent::render('\\Reset\\FormReset');
+		parent::render('\\Reset\\ResetPassword');
 	}
 
 	public static function register()
