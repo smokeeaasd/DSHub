@@ -8,7 +8,7 @@ class RegisterController extends Controller
 {
 	public static function index()
 	{
-		parent::render('\\Register\\FormRegister');
+		parent::render('\\Reset\\FormReset');
 	}
 
 	public static function register()
@@ -22,11 +22,10 @@ class RegisterController extends Controller
 
         if ($email_existente != null)
         {
-
+            $model->save();
+        } else {
+            header("Location: /reset?erro=true");
         }
-
-		if ($email_existente)
-			header("Location: /register?existentemail=true");
 	}
 }
 
